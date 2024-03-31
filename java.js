@@ -117,9 +117,9 @@ const userPrompt = () => {
       alert("Guess Again");
     }
   } else if (anime5.style.display != "none") {
-    if (userInput === "Woobat" || userInput === "woobat") {
-      let myImage = document.querySelector("#woobat"); // Selecting the image element
-      let pokeName = document.querySelector("#woo");
+    if (userInput === "Usagi" || userInput === "usagi") {
+      let myImage = document.querySelector("#usagi"); // Selecting the image element
+      let pokeName = document.querySelector("#usa");
       toggleFilter(myImage, pokeName);
     } else {
       alert("Guess Again");
