@@ -1,8 +1,8 @@
 # SBA3
-Single-Page Web Application
+Single-Page Web Application:
 This is a small single-page web application created as part of a technical assessment. The application demonstrates various web development concepts and techniques, including DOM manipulation, event handling, form validation, and user interaction.
 
-Description
+Description:
 The application is designed to showcase the implementation of the following requirements:
 
 Caching elements using getElementById and querySelector/querySelectorAll
@@ -27,12 +27,12 @@ Open the index.html file in a web browser.
 Usage
 The application provides a user-friendly interface for interacting with the implemented features. Users can navigate through the application, fill out forms, and observe the dynamic behavior of the elements in response to their actions.
 
-Development
+Development:
 The application is developed using HTML, CSS, and JavaScript. It leverages various web development techniques to achieve the desired functionality.
 
 During the development process, frequent commits were made to the git repository to track progress and maintain version control.
 
-Reflection
+Reflection:
 Developing this single-page web application provided valuable insights into the process of creating a functional and interactive user experience. It allowed for the exploration and application of various web development concepts and techniques.
 
 The project emphasized the importance of meeting the minimum requirements before expanding on additional features. This approach ensures a solid foundation and helps in understanding the scope and timeline of the development process.
