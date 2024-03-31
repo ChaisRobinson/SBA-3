@@ -25,7 +25,8 @@ const userPrompt = () => {
   let userInput = prompt("Guess the anime character?");
   console.log(userInput);
   if (anime1.style.display !== "none") {
-    if (userInput === "Goku" || userInput === "goku") { //Check is user input matches character name
+    if (userInput === "Goku" || userInput === "goku") {
+      //Check is user input matches character name
       let myImage = document.querySelector("#goku"); // Selecting the image element
       let animeName = document.querySelector("#gok"); //Selecting the image name
       toggleFilter(myImage, animeName); //Filters through anime charcters to get the correct one
@@ -33,7 +34,8 @@ const userPrompt = () => {
       alert("Guess Again"); // Alert user to guess again
     }
   } else if (anime2.style.display != "none") {
-    if (userInput === "Luffy" || userInput === "luffy") { //Check is user input matches character name
+    if (userInput === "Luffy" || userInput === "luffy") {
+      //Check is user input matches character name
       let myImage = document.querySelector("#luffy"); // Selecting the image element
       let animeName = document.querySelector("#luf"); //Selecting the image name
       toggleFilter(myImage, animeName); //Filters through anime charcters to get the correct one
@@ -41,15 +43,17 @@ const userPrompt = () => {
       alert("Guess Again"); // Alert user to guess again
     }
   } else if (anime3.style.display != "none") {
-    if (userInput === "Ash" || userInput === "ash") { //Check is user input matches character name
+    if (userInput === "Ash" || userInput === "ash") {
+      //Check is user input matches character name
       let myImage = document.querySelector("#ash"); // Selecting the image element
-      let pokeName = document.querySelector("#a"); //Selecting the image name
-      toggleFilter(myImage, pokeName); //Filters through anime charcters to get the correct one
+      let animeName = document.querySelector("#a"); //Selecting the image name
+      toggleFilter(myImage, animeName); //Filters through anime charcters to get the correct one
     } else {
       alert("Guess Again"); // Alert user to guess again
     }
   } else if (anime4.style.display != "none") {
-    if (userInput === "Naruto" || userInput === "naruto") { //Check is user input matches character name
+    if (userInput === "Naruto" || userInput === "naruto") {
+      //Check is user input matches character name
       let myImage = document.querySelector("#naruto"); // Selecting the image element
       let animeName = document.querySelector("#nar"); //Selecting the image name
       toggleFilter(myImage, animeName); //Filters through anime charcters to get the correct one
@@ -57,10 +61,11 @@ const userPrompt = () => {
       alert("Guess Again"); // Alert user to guess again
     }
   } else if (anime5.style.display != "none") {
-    if (userInput === "Usagi" || userInput === "usagi") { //Check is user input matches character name
+    if (userInput === "Usagi" || userInput === "usagi") {
+      //Check is user input matches character name
       let myImage = document.querySelector("#usagi"); // Selecting the image element
-      let pokeName = document.querySelector("#usa"); //Selecting the image name
-      toggleFilter(myImage, pokeName); //Filters through anime charcters to get the correct one
+      let animeName = document.querySelector("#usa"); //Selecting the image name
+      toggleFilter(myImage, animeName); //Filters through anime charcters to get the correct one
     } else {
       alert("Guess Again"); // Alert user to guess again
     }
@@ -184,16 +189,14 @@ function clearErrors() {
 console.log("User agent:", navigator.userAgent);
 console.log("Screen width:", screen.width);
 
-
-/////////////////////////////////
-//               ^             //
-//         Tried to make       //
-//        arrow functions      //
-//        but it broke the     //
-//             code            //
-//       coded from example    //
-/////////////////////////////////
-
-
+/////////////////////////////////////////////////////////
+//               ^                                     //
+//         Tried to make                               //
+//        arrow functions                              //
+//        but it broke the                             //
+//             code                                    //
+//       coded from examples                           //
+// codesandbox.io/examples/package/react-lorem-picsum  //
+/////////////////////////////////////////////////////////
 
 //--------------------javascript for random image generator end-----------------------//
