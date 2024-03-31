@@ -1,5 +1,5 @@
 //------------------javascript for guesss the anime characrer  --------------------//
-// randomized pick for charcter
+// Randomized pick for character
 let randomNum = Math.floor(Math.random() * 6) + 1;
 // Cache DOM elements
 const animeContainer1 = document.getElementById("anime1");
@@ -7,7 +7,7 @@ const animeContainer2 = document.getElementById("anime2");
 const animeContainer3 = document.getElementById("anime3");
 const animeContainer4 = document.getElementById("anime4");
 const animeContainer5 = document.getElementById("anime5");
-//if statement to pick the container with the random number
+// If statement to show the container corresponding to the random number
 if (randomNum === 1) {
   animeContainer1.style.display = "block";
 } else if (randomNum === 2) {
@@ -20,63 +20,63 @@ if (randomNum === 1) {
   animeContainer5.style.display = "block";
 }
 
-//main function to have the user to guess the image 
+// Main function for the user to guess the anime character
 const userPrompt = () => {
   let userInput = prompt("Guess the anime character?");
   console.log(userInput);
   if (anime1.style.display !== "none") {
-    if (userInput === "Goku" || userInput === "goku") {
+    if (userInput === "Goku" || userInput === "goku") { //Check is user input matches character name
       let myImage = document.querySelector("#goku"); // Selecting the image element
-      let animeName = document.querySelector("#gok");
-      toggleFilter(myImage, animeName);
+      let animeName = document.querySelector("#gok"); //Selecting the image name
+      toggleFilter(myImage, animeName); //Filters through anime charcters to get the correct one
     } else {
-      alert("Guess Again");
+      alert("Guess Again"); // Alert user to guess again
     }
   } else if (anime2.style.display != "none") {
-    if (userInput === "Luffy" || userInput === "luffy") {
+    if (userInput === "Luffy" || userInput === "luffy") { //Check is user input matches character name
       let myImage = document.querySelector("#luffy"); // Selecting the image element
-      let animeName = document.querySelector("#luf");
-      toggleFilter(myImage, animeName);
+      let animeName = document.querySelector("#luf"); //Selecting the image name
+      toggleFilter(myImage, animeName); //Filters through anime charcters to get the correct one
     } else {
-      alert("Guess Again");
+      alert("Guess Again"); // Alert user to guess again
     }
   } else if (anime3.style.display != "none") {
-    if (userInput === "Ash" || userInput === "ash") {
+    if (userInput === "Ash" || userInput === "ash") { //Check is user input matches character name
       let myImage = document.querySelector("#ash"); // Selecting the image element
-      let pokeName = document.querySelector("#a");
-      toggleFilter(myImage, pokeName);
+      let pokeName = document.querySelector("#a"); //Selecting the image name
+      toggleFilter(myImage, pokeName); //Filters through anime charcters to get the correct one
     } else {
-      alert("Guess Again");
+      alert("Guess Again"); // Alert user to guess again
     }
   } else if (anime4.style.display != "none") {
-    if (userInput === "Naruto" || userInput === "naruto") {
+    if (userInput === "Naruto" || userInput === "naruto") { //Check is user input matches character name
       let myImage = document.querySelector("#naruto"); // Selecting the image element
-      let animeName = document.querySelector("#nar");
-      toggleFilter(myImage, animeName);
+      let animeName = document.querySelector("#nar"); //Selecting the image name
+      toggleFilter(myImage, animeName); //Filters through anime charcters to get the correct one
     } else {
-      alert("Guess Again");
+      alert("Guess Again"); // Alert user to guess again
     }
   } else if (anime5.style.display != "none") {
-    if (userInput === "Usagi" || userInput === "usagi") {
+    if (userInput === "Usagi" || userInput === "usagi") { //Check is user input matches character name
       let myImage = document.querySelector("#usagi"); // Selecting the image element
-      let pokeName = document.querySelector("#usa");
-      toggleFilter(myImage, pokeName);
+      let pokeName = document.querySelector("#usa"); //Selecting the image name
+      toggleFilter(myImage, pokeName); //Filters through anime charcters to get the correct one
     } else {
-      alert("Guess Again");
+      alert("Guess Again"); // Alert user to guess again
     }
   }
 };
 
 // Function to toggle the black filter
 function toggleFilter(myImage, pokeName) {
-  myImage.classList.add("filtered"); // Removing the 'color-change' class
-  pokeName.classList.add("opacity");
+  myImage.classList.add("filtered"); // Adding the 'filtered' class to the image element
+  pokeName.classList.add("opacity"); // Adding the 'opacity' class to the image name element
 }
-// alert message if they get it correction, factor in
+// Alert message if the guess is correct
 const alertMessage = () => {
   alert("Yay");
 };
-//refresh page 
+// Function to refresh the page
 const refreshPage = () => location.reload();
 
 //------------------javascript for guesss the anime characrer end --------------------//
@@ -93,26 +93,35 @@ const imageContainer = document.getElementById("imageContainer");
 imageForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-// Parse width and height input values to integers
+  // Parse width and height input values to integers
   const width = parseInt(widthInput.value);
   const height = parseInt(heightInput.value);
 
-// If statement to verify width and height input values
-  if (isNaN(width) || isNaN(height) || width < 100 || width > 800 || height < 100 || height > 600) {
+  // If statement to verify width and height input values
+  if (
+    isNaN(width) ||
+    isNaN(height) ||
+    width < 100 ||
+    width > 800 ||
+    height < 100 ||
+    height > 600
+  ) {
     // Show error message if input values are invalid
-    showError("Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height).");
+    showError(
+      "Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height)."
+    );
     return;
   }
 
-// Clear previous image from image container
+  // Clear previous image from image container
   imageContainer.innerHTML = "";
 
   // Create an image element
   const image = document.createElement("img");
-    // Set image source to a random Lorem Ipsum image based on width and height
+  // Set image source to a random Lorem Ipsum image based on width and height
 
   image.src = `https://picsum.photos/${width}/${height}`;
-    // Set alt attribute for accessibility
+  // Set alt attribute for accessibility
 
   image.alt = `Random Image ${width}x${height}`;
 
@@ -130,11 +139,20 @@ function validateInput() {
   const height = parseInt(heightInput.value);
 
   // Disable generate button and show error message if input values are invalid
-  if (isNaN(width) || isNaN(height) || width < 100 || width > 800 || height < 100 || height > 600) {
+  if (
+    isNaN(width) ||
+    isNaN(height) ||
+    width < 100 ||
+    width > 800 ||
+    height < 100 ||
+    height > 600
+  ) {
     generateBtn.disabled = true;
-    showError("Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height).");
+    showError(
+      "Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height)."
+    );
   } else {
-        // Enable generate button and clear previous error messages
+    // Enable generate button and clear previous error messages
     generateBtn.disabled = false;
     clearErrors();
   }
@@ -142,28 +160,27 @@ function validateInput() {
 
 // Function to show error message
 function showError(message) {
-    // Clear previous error messages
+  // Clear previous error messages
   clearErrors();
-    // Create a new paragraph element for the error message
+  // Create a new paragraph element for the error message
   const errorElement = document.createElement("p");
-    // Set the text content of the error element
+  // Set the text content of the error element
   errorElement.textContent = message;
-    // Add a CSS class to style the error message
+  // Add a CSS class to style the error message
   errorElement.classList.add("error");
-    // Append the error message to the image container
+  // Append the error message to the image container
   imageContainer.appendChild(errorElement);
 }
 
 // Function to clear error messages
 function clearErrors() {
-    // Select all elements with the "error" class
+  // Select all elements with the "error" class
   const errorElements = document.querySelectorAll(".error");
-    // Remove each error element from the DOM
-  errorElements.forEach(element => element.remove());
+  // Remove each error element from the DOM
+  errorElements.forEach((element) => element.remove());
 }
 
 // Log browser properties
 console.log("User agent:", navigator.userAgent);
 console.log("Screen width:", screen.width);
 //--------------------javascript for random image generator end-----------------------//
-
