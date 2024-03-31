@@ -88,19 +88,19 @@ const refreshPage = () => location.reload();
 
 //--------------------javascript for random image generator------------------------//
 // Cache DOM elements
-const imageForm = document.getElementById("imageForm");
-const widthInput = document.querySelector("#width");
-const heightInput = document.querySelector("#height");
-const generateBtn = document.getElementById("generateBtn");
+const pictureForm = document.getElementById("imageForm");
+const widthValue = document.querySelector("#width");
+const heightValue = document.querySelector("#height");
+const createBtn = document.getElementById("createBtn");
 const imageContainer = document.getElementById("imageContainer");
 
 // Event listener for form submission
-imageForm.addEventListener("submit", function (event) {
+pictureForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
   // Parse width and height input values to integers
-  const width = parseInt(widthInput.value);
-  const height = parseInt(heightInput.value);
+  const width = parseInt(widthValue.value);
+  const height = parseInt(heightValue.value);
 
   // If statement to verify width and height input values
   if (
@@ -135,13 +135,13 @@ imageForm.addEventListener("submit", function (event) {
 });
 
 // Event listeners for input validation
-widthInput.addEventListener("input", validateInput);
-heightInput.addEventListener("input", validateInput);
+widthValue.addEventListener("input", validateInput);
+heightValue.addEventListener("input", validateInput);
 
 // Function to validate width and height input values
 function validateInput() {
-  const width = parseInt(widthInput.value);
-  const height = parseInt(heightInput.value);
+  const width = parseInt(widthValue.value);
+  const height = parseInt(heightValue.value);
 
   // Disable generate button and show error message if input values are invalid
   if (
@@ -152,13 +152,13 @@ function validateInput() {
     height < 100 ||
     height > 600
   ) {
-    generateBtn.disabled = true;
+    createBtn.disabled = true;
     showError(
       "Width and height must be numeric values between 100 and 700 (width) and 100 and 600 (height)."
     );
   } else {
     // Enable generate button and clear previous error messages
-    generateBtn.disabled = false;
+    createBtn.disabled = false;
     clearErrors();
   }
 }
@@ -197,6 +197,7 @@ console.log("Screen width:", screen.width);
 //             code                                    //
 //       coded from examples                           //
 // codesandbox.io/examples/package/react-lorem-picsum  //
+//    & notes from/examples from class                 //
 /////////////////////////////////////////////////////////
 
 //--------------------javascript for random image generator end-----------------------//
