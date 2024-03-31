@@ -183,4 +183,16 @@ function clearErrors() {
 // Log browser properties
 console.log("User agent:", navigator.userAgent);
 console.log("Screen width:", screen.width);
+
+
+/////////////////////////////////
+//                             //
+//         Tried to make       //
+//        arrow functions      //
+//        but it broke the     //
+//             code            //
+/////////////////////////////////
+
+
+
 //--------------------javascript for random image generator end-----------------------//
