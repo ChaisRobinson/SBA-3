@@ -102,13 +102,13 @@ imageForm.addEventListener("submit", function (event) {
     isNaN(width) ||
     isNaN(height) ||
     width < 100 ||
-    width > 800 ||
+    width > 700 ||
     height < 100 ||
     height > 600
   ) {
     // Show error message if input values are invalid
     showError(
-      "Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height)."
+      "Width and height must be numeric values between 100 and 700 (width) and 100 and 600 (height)."
     );
     return;
   }
@@ -143,13 +143,13 @@ function validateInput() {
     isNaN(width) ||
     isNaN(height) ||
     width < 100 ||
-    width > 800 ||
+    width > 700 ||
     height < 100 ||
     height > 600
   ) {
     generateBtn.disabled = true;
     showError(
-      "Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height)."
+      "Width and height must be numeric values between 100 and 700 (width) and 100 and 600 (height)."
     );
   } else {
     // Enable generate button and clear previous error messages
@@ -186,11 +186,12 @@ console.log("Screen width:", screen.width);
 
 
 /////////////////////////////////
-//                             //
+//               ^             //
 //         Tried to make       //
 //        arrow functions      //
 //        but it broke the     //
 //             code            //
+//       coded from example    //
 /////////////////////////////////
 
 
