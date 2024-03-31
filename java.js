@@ -1,74 +1,13 @@
-//--------------------javascript for random image generator------------------------//
-const imageForm = document.getElementById("imageForm");
-const widthInput = document.querySelector("#width");
-const heightInput = document.querySelector("#height");
-const generateBtn = document.getElementById("generateBtn");
-const imageContainer = document.getElementById("imageContainer");
-
-imageForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const width = parseInt(widthInput.value);
-  const height = parseInt(heightInput.value);
-
-  if (isNaN(width) || isNaN(height) || width < 100 || width > 800 || height < 100 || height > 600) {
-    showError("Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height).");
-    return;
-  }
-
-  imageContainer.innerHTML = "";
-
-  const image = document.createElement("img");
-  image.src = `https://picsum.photos/${width}/${height}`;
-  image.alt = `Random Image ${width}x${height}`;
-
-  imageContainer.appendChild(image);
-});
-
-widthInput.addEventListener("input", validateInput);
-heightInput.addEventListener("input", validateInput);
-
-function validateInput() {
-  const width = parseInt(widthInput.value);
-  const height = parseInt(heightInput.value);
-
-  if (isNaN(width) || isNaN(height) || width < 100 || width > 800 || height < 100 || height > 600) {
-    generateBtn.disabled = true;
-    showError("Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height).");
-  } else {
-    generateBtn.disabled = false;
-    clearErrors();
-  }
-}
-
-function showError(message) {
-  clearErrors();
-  const errorElement = document.createElement("p");
-  errorElement.textContent = message;
-  errorElement.classList.add("error");
-  imageContainer.appendChild(errorElement);
-}
-
-function clearErrors() {
-  const errorElements = document.querySelectorAll(".error");
-  errorElements.forEach(element => element.remove());
-}
-
-console.log("User agent:", navigator.userAgent);
-console.log("Screen width:", screen.width);
-
-//------------------javascript for random image generator end --------------------//
-
-
 //------------------javascript for guesss the anime characrer  --------------------//
+// randomized pick for charcter
 let randomNum = Math.floor(Math.random() * 6) + 1;
-
+// Cache DOM elements
 const animeContainer1 = document.getElementById("anime1");
 const animeContainer2 = document.getElementById("anime2");
 const animeContainer3 = document.getElementById("anime3");
 const animeContainer4 = document.getElementById("anime4");
 const animeContainer5 = document.getElementById("anime5");
-
+//if statement to pick the container with the random number
 if (randomNum === 1) {
   animeContainer1.style.display = "block";
 } else if (randomNum === 2) {
@@ -81,6 +20,7 @@ if (randomNum === 1) {
   animeContainer5.style.display = "block";
 }
 
+//main function to have the user to guess the image 
 const userPrompt = () => {
   let userInput = prompt("Guess the anime character?");
   console.log(userInput);
@@ -132,11 +72,98 @@ function toggleFilter(myImage, pokeName) {
   myImage.classList.add("filtered"); // Removing the 'color-change' class
   pokeName.classList.add("opacity");
 }
-
+// alert message if they get it correction, factor in
 const alertMessage = () => {
   alert("Yay");
 };
-
+//refresh page 
 const refreshPage = () => location.reload();
 
 //------------------javascript for guesss the anime characrer end --------------------//
+
+//--------------------javascript for random image generator------------------------//
+// Cache DOM elements
+const imageForm = document.getElementById("imageForm");
+const widthInput = document.querySelector("#width");
+const heightInput = document.querySelector("#height");
+const generateBtn = document.getElementById("generateBtn");
+const imageContainer = document.getElementById("imageContainer");
+
+// Event listener for form submission
+imageForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+// Parse width and height input values to integers
+  const width = parseInt(widthInput.value);
+  const height = parseInt(heightInput.value);
+
+// If statement to verify width and height input values
+  if (isNaN(width) || isNaN(height) || width < 100 || width > 800 || height < 100 || height > 600) {
+    // Show error message if input values are invalid
+    showError("Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height).");
+    return;
+  }
+
+// Clear previous image from image container
+  imageContainer.innerHTML = "";
+
+  // Create an image element
+  const image = document.createElement("img");
+    // Set image source to a random Lorem Ipsum image based on width and height
+
+  image.src = `https://picsum.photos/${width}/${height}`;
+    // Set alt attribute for accessibility
+
+  image.alt = `Random Image ${width}x${height}`;
+
+  // Append the image to the image container
+  imageContainer.appendChild(image);
+});
+
+// Event listeners for input validation
+widthInput.addEventListener("input", validateInput);
+heightInput.addEventListener("input", validateInput);
+
+// Function to validate width and height input values
+function validateInput() {
+  const width = parseInt(widthInput.value);
+  const height = parseInt(heightInput.value);
+
+  // Disable generate button and show error message if input values are invalid
+  if (isNaN(width) || isNaN(height) || width < 100 || width > 800 || height < 100 || height > 600) {
+    generateBtn.disabled = true;
+    showError("Width and height must be numeric values between 100 and 800 (width) and 100 and 600 (height).");
+  } else {
+        // Enable generate button and clear previous error messages
+    generateBtn.disabled = false;
+    clearErrors();
+  }
+}
+
+// Function to show error message
+function showError(message) {
+    // Clear previous error messages
+  clearErrors();
+    // Create a new paragraph element for the error message
+  const errorElement = document.createElement("p");
+    // Set the text content of the error element
+  errorElement.textContent = message;
+    // Add a CSS class to style the error message
+  errorElement.classList.add("error");
+    // Append the error message to the image container
+  imageContainer.appendChild(errorElement);
+}
+
+// Function to clear error messages
+function clearErrors() {
+    // Select all elements with the "error" class
+  const errorElements = document.querySelectorAll(".error");
+    // Remove each error element from the DOM
+  errorElements.forEach(element => element.remove());
+}
+
+// Log browser properties
+console.log("User agent:", navigator.userAgent);
+console.log("Screen width:", screen.width);
+//--------------------javascript for random image generator end-----------------------//
+
