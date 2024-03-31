@@ -1,0 +1,109 @@
+body {
+  background-color: rgb(160, 84, 190);
+}
+
+
+
+/*--------- random img generator css----------------------*/
+#imageContainer {
+  margin-top: 20px;
+}
+.imgConatiner {
+  height: 1000px;
+  width: 100%;
+  background-image: url(https://images5.alphacoders.com/314/314574.png);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+#generateBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  background: red;
+  color: white;
+  border: none;
+  font: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #000;
+}
+
+.error {
+  color: red;
+}
+/*------------- random img generator css end------- */
+
+/*------------- guess anime css------------------------- */
+anime-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  opacity: 0;
+  transition: opacity 3s ease;
+}
+
+.color-change {
+  width: 400px;
+  height: auto;
+  filter: brightness(0) saturate(100%);
+  transition: filter 3s ease;
+}
+
+.color-change.filtered {
+  filter: none;
+}
+
+.name.opacity {
+  opacity: 1;
+}
+
+.container {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 1000px;
+  background-image: url("https://images6.alphacoders.com/133/1330710.png");
+}
+
+.prompt {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  background: blue;
+  color: white;
+  border: none;
+  font: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #000;
+}
+.playAgain {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  background: red;
+  color: white;
+  border: none;
+  font: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #000;
+}
+
+/* ------------------guess anime css end------------------*/
