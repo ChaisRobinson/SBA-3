@@ -123,11 +123,11 @@ pictureForm.addEventListener("submit", function (event) {
 
   // Create an image element
   const image = document.createElement("img");
+  
   // Set image source to a random Lorem Ipsum image based on width and height
-
   image.src = `https://picsum.photos/${width}/${height}`;
+  
   // Set alt attribute for accessibility
-
   image.alt = `Random Image ${width}x${height}`;
 
   // Append the image to the image container
@@ -189,10 +189,6 @@ function clearErrors() {
 console.log("User agent:", navigator.userAgent);
 console.log("Screen width:", screen.width);
 
-/////////////////////////////////////////////////////////
-//       coded from examples                           //
-// codesandbox.io/examples/package/react-lorem-picsum  //
-//    & notes from/examples from class                 //
-/////////////////////////////////////////////////////////
+
 
 //--------------------javascript for random image generator end-----------------------//
