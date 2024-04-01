@@ -190,11 +190,6 @@ console.log("User agent:", navigator.userAgent);
 console.log("Screen width:", screen.width);
 
 /////////////////////////////////////////////////////////
-//               ^                                     //
-//         Tried to make                               //
-//        arrow functions                              //
-//        but it broke the                             //
-//             code                                    //
 //       coded from examples                           //
 // codesandbox.io/examples/package/react-lorem-picsum  //
 //    & notes from/examples from class                 //
